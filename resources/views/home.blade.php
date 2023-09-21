@@ -2,9 +2,9 @@
 
 
 @section('title')
-    home
+    posts
 @endsection
 
 @section('cont')
-    <h1>This Home <h1/>
+    <h1>This Posts <h1/>
 @endsection
