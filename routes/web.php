@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserProfileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -54,6 +55,8 @@ Route::controller(PostController::class)->group(function () {
     Route::get('posts/update/{id}', 'updatePosts');
     Route::get('posts/delete/{id}', 'deletePosts');
 });
+
+
 //Route::get('/posts', [PostController::class, 'showUsers']);
 //Route::get('/posts/create', [PostController::class, 'createPosts']);
 //Route::get('/posts/edit/{id}', [PostController::class, 'editPosts']);
@@ -61,4 +64,7 @@ Route::controller(PostController::class)->group(function () {
 //Route::get('/posts/delete/{id}', [PostController::class, 'deletePosts']);
 
 
+Route::resource('users', \App\Http\Controllers\UserController::class);
 
+//Route::get('user_profile',UserProfileController::class);
+Route::get('user_profile',[UserProfileController::class ,'userProfile']);
