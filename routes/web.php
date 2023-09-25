@@ -68,3 +68,7 @@ Route::resource('users', \App\Http\Controllers\UserController::class);
 
 //Route::get('user_profile',UserProfileController::class);
 Route::get('user_profile',[UserProfileController::class ,'userProfile']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
