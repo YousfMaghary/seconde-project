@@ -21,10 +21,10 @@ Route::get('/', function () {
 });
 
 
-//Route::post('users', function (Request $request) {
-////return $request ;
-////    return view ('users');
-//});
+Route::post('users', function (Request $request) {
+return $request ;
+    return view ('users');
+});
 
 //
 //Route::get('users/{id}', function ($id) {

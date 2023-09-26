@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-//            $table->integer('user_id')->after('check') ;
+//      $table->integer('user_id')->after('body') ;
         });
     }
 
